@@ -3,6 +3,10 @@ from django.shortcuts import render,redirect
 from django.core.mail import send_mail
 
 from about.models import About, Blog,Contact
+
+from my_works.models import Works
+
+
 # Create your views here.
 def index(request):
     about = About.objects.latest('id')
@@ -42,8 +46,13 @@ def contacts(request):
 
 def portfolio(request):
    about = About.objects.latest('id')
+   work = Works.objects.all()
+
    context = {
-    'about':about
+    'about':about,
+    'work':work,
+
+    
    } 
    return render(request,'portfolio.html',context)
 def blog(request):

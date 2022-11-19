@@ -17,7 +17,7 @@
         <li class="icon-box">
             <i class="fa fa-briefcase"></i>
             <a href="{%url 'portfolio'%}">
-                <h2>Портфолио</h2>
+                <h2>Проекты</h2>
             </a>
         </li>
         <li class="icon-box">
@@ -42,11 +42,11 @@
             <span></span>
             <span></span>
             <ul class="list-unstyled" id="menu">
-                <li class="active"><a href="index.html"><i class="fa fa-home"></i><span>Домой</span></a></li>
-                <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
-                <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
-                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                <li><a href="blog.html"><i class="fa fa-comments"></i><span>Blog</span></a></li>
+                <li class="active"><a href="{%url 'index'%}"><i class="fa fa-home"></i><span>Домой</span></a></li>
+                <li><a href="{% url 'about'%}"><i class="fa fa-user"></i><span>Обо Мне</span></a></li>
+                <li><a href="{% url 'portfolio'%}"><i class="fa fa-folder-open"></i><span>Проекты</span></a></li>
+                <li><a href="{% url 'contact'%}"><i class="fa fa-envelope-open"></i><span>Контакты</span></a></li>
+                <li><a href="{% url 'blog_name'%}"><i class="fa fa-comments"></i><span>Блог</span></a></li>
             </ul>
         </div>
     </nav>
